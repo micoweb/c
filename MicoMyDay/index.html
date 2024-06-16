@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicoMyDay</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons/micomico.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8ceba41633.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+
+
+
+    <div id="titleDiv">
+        <h1 id="title">Mico<strong>MyDay</strong></h1>
+    </div>
+
+    <center>
+        <div id="inputNameBackgroundDiv">
+            <h1 id="title">Mico<strong>Home</strong></h1>
+            <div id="inputNameDiv"></div>
+            <h2 id="textInputName">Enter your name here</h2>
+            <br><br>
+            <input type="text" id="nameInputBox" name="nameInputBox" placeholder="">
+            <button id="submitNameButton" onclick="addName()">OK</button>
+        </div>
+    </center>
+
+    </div>
+
+    <center>
+        <div id="loginMenu">
+            <h1 id="title">Mico<strong>Home</strong></h1>
+            <h2 id="PasswordInputName">Enter your password here</h2>
+            <br><br>
+            <input type="password" id="PasswordInputBox" name="PasswordInputBox" placeholder="Enter here">
+            <button id="submitPasswordButton" onclick="checkPassword()">OK</button>
+        </div>
+    </center>
+
+    <div id="searchCentre">
+
+    </div>
+
+    <div id="appContents">
+        <div id="mainFocusInputDiv">
+            <center>
+                <h2 id="timeText"></h2>
+                <input type="text" placeholder="What is your main focus Today" id="mainFocusInput" name="mainFocusInput"
+                    class="mainFocusInput">
+                <input id="searchBar" type="text" placeholder="Type something to search">
+                <button id="searchButton" onclick="googleSearch()">🔍</button>
+            </center>
+        </div>
+
+
+        <div id="calAndDoNowDiv">
+            <header id="tabNavigationBar">
+                <button id="doNowBtn" onclick="showDoNow()">ToDo</button>
+                <button id="calBtn" onclick="showCalculator()">Calculator</button>
+                <button id="moreBtn" style="display: none;" onclick="showMore()">Grocery</button>
+
+                <img src="icons/settings.png" id="settingsBtn" onclick="showSettings()">
+            </header>
+
+            <div id="micoDoNowDiv">
+                <h1 id="appTextH1">ToDo</h1>
+                <center>
+                    <div id="addTasksRow">
+                        <input id="doNowInput" name="doNowInput" type="text" placeholder="Hey, add a task now...">
+                        <button id="doNowAdd" onclick="addTask()">Add</button>
+                    </div>
+                </center>
+                <ul id="doNowList"></ul>
+            </div>
+
+            <div id="calculator">
+                <h1 id="appTextH1">Calculator</h1>
+                <center>
+                    
+                    <div id="calHistory">
+                        <ul id="calHistoryList"></ul>
+                    </div>
+                    <div id="app">
+
+                        <div id="displayDiv">
+                            <h3 id="display"></h3>
+                        </div>
+            
+                        <button class="calbuttons" id="n1" onclick="fn1()">1</button>
+                        <button class="calbuttons" id="n2" onclick="fn2()">2</button>
+                        <button class="calbuttons" id="n3" onclick="fn3()">3</button>
+                        <button class="calbuttons" id="nPl" onclick="fPlu()" class="control">+</button>
+            
+                        <br>
+            
+                        <button class="calbuttons" id="n4" onclick="fn4()">4</button>
+                        <button class="calbuttons" id="n5" onclick="fn5()">5</button>
+                        <button class="calbuttons" id="n6" onclick="fn6()">6</button>
+                        <button class="calbuttons" id="nMi" onclick="fMin()" class="control">-</button>
+            
+                        <br>
+            
+                        <button class="calbuttons" id="n7" onclick="fn7()">7</button>
+                        <button class="calbuttons" id="n8" onclick="fn8()">8</button>
+                        <button class="calbuttons" id="n9" onclick="fn9()">9</button>
+                        <button class="calbuttons" id="nMu" onclick="fMul()" class="control">x</button>
+            
+                        <br>
+            
+                        <button class="calbuttons" id="n0" onclick="fn0()">0</button>
+                        <button class="calbuttons" id="n0" onclick="fn00()">00</button>
+                        <button class="calbuttons" id="n0" onclick="fnDec()">.</button>
+                        <button class="calbuttons" id="nDv" onclick="fDvi()" class="control">÷</button>
+            
+                        <br>
+            
+                        <button class="calbuttons" id="nEq" onclick="fEqu()">=</button>
+                        <button class="calbuttons" id="nAc" onclick="fAc()" class="control">AC</button>
+                        <button class="calbuttons" id="eraser" onclick="fEr()" class="control"><i class="fa-solid fa-delete-left"></i></button>
+             
+                    </div>
+                </center>
+            </div>
+
+            <div id="more">
+                <h1 id="appTextH1">Grocery List</h1>
+                <center>
+                    <div id="addGroceryRow">
+                        <input id="groceryInput" name="groceryInput" type="text" placeholder="Enter here...">
+                        <button id="groceryAdd" onclick="addGrocery()">Add</button>
+                    </div>
+                </center>
+                <ul id="doNowList"></ul>
+            </div>
+
+            <div id="settings">
+                <h1 id="appTextH1">Settings</h1>
+                <div id="themes" class="settingsInnerDiv">
+                    <h2>Themes</h2>
+                    <div id="themeImgDiv">
+                        <img src="backgrounds/background1.jpg" id="themeImg1" class="themeImg" onclick="bgImg1()">
+                        <img src="backgrounds/background2.jpg" id="themeImg2" class="themeImg" onclick="bgImg2()">
+                        <br>
+                        <img src="backgrounds/background5.jpg" id="themeImg5" class="themeImg" onclick="bgImg5()">
+                        <img src="backgrounds/background6.jpeg" id="themeImg6" class="themeImg" onclick="bgImg6()">
+                    </div>
+                </div>
+
+                <div id="changeNameDiv" class="settingsInnerDiv">
+                    <h2>Your Name</h2>
+                    <input type="text" placeholder="" id="changeName" name="changeName">
+                    <button id="changeNameBtn" onclick="changeNameFunc()">OK</button>
+                </div>
+
+                <div id="changePassword" class="settingsInnerDiv">
+                    <h2>Your Password</h2>
+                    <h4 id="h41" onclick="checkboxOnClick()">Password</h4>
+                    <input type="checkbox" onclick="checkboxOnClick()" id="check">
+                    <br>
+                    <br>
+                    <input type="text" placeholder="" id="changePasswordInp" name="changePasswordInp">
+                    <button id="changePasswordBtn" onclick="addPassword()">OK</button>
+                </div>
+
+                <div id="about" class="settingsInnerDiv">
+                    <h2>About</h2>
+                    <hr>
+                    <h5>Version <font style="font-family: 'Poppins', sans-serif; font-weight: 500; ">5.1</font></h5>
+                    <h5>Created By Sadew Nethsara</h5>
+                </div>
+
+                <div class="settingsInnerDiv">
+                    <h2>Contact</h2>
+                    <h5>Have you a question tell me that... <a id="emailLink"
+                            href="mailto:microworld.micomail@gmail.com">microworld.micomail@gmail.com</a>
+                    </h5>
+                    <h5>Rate my work <a id="emailLink" style="color: rgb(28, 0, 59);"
+                            href="https://wa.me/+94724090644/?text=5.0 Stars" target="_blank"> <font style="font-family: 'Poppins', sans-serif; font-weight: 500; ">+94 72 409 0644</font></a>
+                            <br> ⭐⭐⭐⭐⭐
+                    </h5>
+                </div>
+
+                <div id="sharePannelsBoth">
+
+                    <div id="sharePannel">
+                        <a
+                            href="https://twitter.com/share?url=<Hello.. visit this amazing website https://raspy-admitted-boysenberry.glitch.me/>&text=<TEXT>via=<USERNAME>"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=<Hello.. visit this amazing website https://raspy-admitted-boysenberry.glitch.me/>"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a
+                            href="https://reddit.com/submit?url=<Hello.. visit this amazing website https://raspy-admitted-boysenberry.glitch.me/>&title=<TITLE>"><i
+                                class="fa-brands fa-reddit"></i></a>
+                        <a
+                            href="https://www.linkedin.com/shareArticle?url=<Hello.. https://raspy-admitted-boysenberry.glitch.me/>&title=<TITLE>&summary=<SUMMARY>&source=<Hello.. visit this amazing https://microworld-micowebsites.on.drv.tw/MicoToday/>"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a
+                            href="mailto:?subject=<SUBJECT>&body=<Hello... visit this amazing website https://raspy-admitted-boysenberry.glitch.me/>"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a
+                            href="whatsapp://send?text=Hello... visit this amazing website https://raspy-admitted-boysenberry.glitch.me/"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <i class="fa-solid fa-circle-xmark" onclick="closeSharePannel()"></i>
+                    </div>
+
+                    <div id="shareBtn" onclick="openSharePannel()">
+                        <p onclick="openSharePannel()">Share<i class="fa-solid fa-arrow-up-from-bracket"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

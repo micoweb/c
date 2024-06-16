@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    ;
+    font-weight: bold;
+    transition: 1s;
+    animation: fade 1s;
+    user-select: none;
+    outline: none;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+}
+
+
+
+#themes {
+    display: none;
+}
+
+
+
+html {
+    background: url('backgrounds/aa.jpg') no-repeat center center fixed;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#appTextH1 {
+    padding-left: 10px;
+}
+
+#title {
+    font-size: 60px;
+    user-select: none;
+    animation: textSpacing 1.5s;
+    letter-spacing: 0px;
+    font-weight: 500;
+    color: #faebd7;
+}
+
+@keyframes textSpacing {
+    0% {
+        letter-spacing: -30px;
+    }
+}
+
+#titleDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-top: -20px;
+    padding-left: 20px;
+}
+
+strong {
+    color: rgb(255, 174, 0);
+    font-family: Comic Sans Ms;
+}
+
+#textInputName,
+#PasswordInputName {
+    color: #ffffff;
+}
+
+#inputNameBackgroundDiv,
+#loginMenu {
+    position: absolute;
+    background: url('backgrounds/aa.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 99;
+    border-radius: 20px;
+    width: 99%;
+    height: 100%;
+}
+
+#textInputName,
+#PasswordInputName {
+    font-size: 30px;
+}
+
+#nameInputBox,
+#PasswordInputBox {
+    width: 220px;
+    height: 40px;
+    border-radius: 30px 0px 0px 30px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+#submitNameButton,
+#submitPasswordButton {
+    width: 50px;
+    height: 42px;
+    border-radius: 0px 30px 30px 0px;
+    font-size: 20px;
+    border: none;
+    background: rgb(0, 102, 255);
+    color: white;
+    margin-top: -1px;
+    margin-left: -5px;
+}
+
+#submitNameButton:hover,
+#submitPasswordButton:hover {
+    background: rgb(17, 0, 255);
+}
+
+#appContents {
+    margin: 0px;
+}
+
+#mainFocusInputDiv {
+    position: relative;
+    top: 100px;
+    margin: 0 0 0 50px;
+    float: left;
+}
+
+#timeText {
+    font-size: 40px;
+    color: #f8d2a0;
+    user-select: none;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+#mainFocusInput {
+    outline: none;
+    border: none;
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    background: transparent;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Comic Sans Ms;
+    display: none;
+}
+
+.mainFocusInput::placeholder {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#calAndDoNowDiv {
+    width: 450px;
+    height: fit-content;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.31);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+    display: none;
+    overflow: hidden;
+    padding: 15px;
+    float: right;
+    padding-bottom: 40px;
+    margin: 130px 20px;
+}
+
+#tabNavigationBar {
+    width: 100%;
+    background: transparent;
+    height: 35px;
+    border-radius: 16px 16px 0px 0px;
+}
+
+#doNowBtn {
+    margin: 5px 0px 0px 5px;
+    z-index: 106;
+    position: relative;
+    float: left;
+    background: #ffd000;
+    border: none;
+    border-bottom: none;
+    border-radius: 14px;
+    width: 100px;
+    height: 30px;
+}
+
+#calBtn {
+    margin: 5px 0px 0px -12px;
+    z-index: 105;
+    position: relative;
+    background: #9e9e9e;
+    float: left;
+    border: none;
+    border-bottom: none;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    width: 100px;
+    height: 30px;
+}
+
+#moreBtn {
+    margin: 5px 0px 0px -13px;
+    z-index: 104;
+    position: relative;
+    background: #c0c0c0;
+    float: left;
+    border: none;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    width: 100px;
+    height: 30px;
+}
+
+#settingsBtn {
+    float: right;
+    width: 22px;
+    margin: 5px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#settingsBtn:hover {
+    transform: rotate(220deg);
+    background: #ffffff3a;
+}
+
+#micoDoNowDiv {
+    display: block;
+}
+
+#calculator {
+    display: none;
+}
+
+#more {
+    display: none;
+}
+
+#settings {
+    display: none;
+}
+
+#calHistoryList {
+    display: block;
+}
+
+.micoWebsites {
+    width: 60px;
+    border-radius: 50%;
+}
+
+#more>ul>li {
+    font-size: 20px;
+    margin: 20px 35px 0px 0px;
+    list-style: none;
+    float: left;
+
+}
+
+#more>ul>li>a {
+    text-decoration: none;
+    position: relative;
+    top: -25px;
+    margin-left: 5px;
+}
+
+/* Calculator */
+
+.calInput {
+    outline: none;
+    border: none;
+    width: 230px;
+    height: 40px;
+    margin-top: 5px;
+    display: block;
+    border-radius: 10px;
+    font-size: 30px;
+    padding-left: 5px;
+}
+
+.math {
+    border: none;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    user-select: none;
+    border-radius: 10px;
+}
+
+#calHistoryList>li {
+    background: rgb(236, 235, 235);
+    padding: 10px 10px 10px 10px;
+    margin: 5px 17px 0px -20px;
+    font-size: 25px;
+    animation: leftAni 1.5s;
+    list-style: none;
+    border-radius: 10px;
+    position: relative;
+    left: 0px;
+}
+
+@keyframes leftAni {
+    0% {
+        left: -1000px;
+    }
+}
+
+#calHistoryList>li>span {
+    cursor: pointer;
+    background: gray;
+    color: white;
+    padding: 10px 17px 10px 17px;
+    float: right;
+    margin: -10px -10px -0px -0px;
+    user-select: none;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#calHistoryList>li>span:hover {
+    background: rgb(211, 0, 0);
+}
+
+/* DoNow */
+#addTasksRow {
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    border-radius: 30px;
+    width: 80%;
+}
+
+#doNowInput {
+    flex: 1;
+    outline: none;
+    border: none;
+    padding: 15px;
+    background: transparent;
+}
+
+#doNowAdd {
+    border: none;
+    outline: none;
+    padding: 16px 16px;
+    border-radius: 0px 30px 30px 0px;
+    color: white;
+    background: rgb(0, 124, 240);
+    user-select: none;
+    transition: .25s;
+}
+
+#doNowAdd:hover {
+    background: rgb(2, 214, 97);
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+#doNowList li {
+    background: rgb(236, 235, 235);
+    height: 20px;
+    margin: 5px 30px 0px 15px;
+    padding: 16px 60px;
+    font-size: 15px;
+    animation: leftAni 1s;
+    list-style: none;
+    border-radius: 50px;
+    position: relative;
+    left: -30px;
+    overflow: hidden;
+    width: 70%;
+}
+
+#doNowList li::before {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 0px;
+    background-image: url('icons/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    top: 3px;
+    left: 3px;
+    margin-left: -0px;
+    transition: linear .5s;
+}
+
+#doNowList li.checked {
+    text-decoration: line-through;
+    color: #555;
+}
+
+#doNowList li.checked::before {
+    background-image: url('icons/checked.png');
+    width: 45px;
+    height: 45px;
+    transition: linear .5s;
+}
+
+#doNowList li span {
+    position: absolute;
+    right: 15px;
+    top: 3px;
+    font-size: 40px;
+    color: #555;
+    line-height: 40px;
+    font-weight: 200;
+    text-align: center;
+    transition: .5s linear;
+}
+
+#doNowList li span:hover {
+    color: #ff0000;
+    transform: rotate(360deg);
+}
+
+.settingsInnerDiv {
+    text-align: left;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.233);
+    padding: 0px 15px 15px 20px;
+    border-radius: 25px;
+}
+
+.settingsInnerDiv>h2 {
+    padding-top: 15px;
+}
+
+#themeImg1 {
+    border: 2px solid #414040;
+}
+
+.themeImg {
+    width: 96px;
+    height: 55px;
+    border-radius: 5px;
+}
+
+.themeImg:hover {
+    width: 160px;
+    height: 90px;
+    margin: 10px;
+}
+
+.gray::placeholder {
+    color: #474747;
+}
+
+.white::placeholder {
+    color: #ffffff;
+}
+
+#changeName,
+#changePasswordInp {
+    outline: none;
+    border: none;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+#changeNameBtn,
+#changePasswordBtn {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    background: rgb(0, 124, 240);
+    user-select: none;
+    transition: .25s;
+    position: relative;
+    top: -3px;
+}
+
+#changeNameBtn:hover,
+#changePasswordBtn:hover {
+    background: rgb(2, 214, 97);
+    padding: 7px 12px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+}
+
+#emailLink {
+    user-select: text;
+}
+
+#h41 {
+    display: inline;
+}
+
+#changePasswordBtn,
+#changePasswordInp {
+    display: none;
+}
+
+
+@media (max-width: 544px) {
+    #calAndDoNowDiv {
+        width: 350px;
+        margin: auto;
+        position: relative;
+        top: 130px;
+        float: none;
+    }
+
+    #mainFocusInputDiv {
+        margin: auto;
+        position: relative;
+        top: 100px;
+        float: none;
+    }
+}
+
+#searchBar {
+    outline: none;
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 30px 0 0 30px;
+    width: 65%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    top: -1px;
+    color: white;
+    background: rgba(255, 255, 255, 0.205);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+}
+
+#searchBar::placeholder {
+    color: #9b9b9b;
+}
+
+#searchButton {
+    border: none;
+    border-radius: 0 50% 50% 0;
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(10px);
+    font-size: 20px;
+    padding: 2px;
+    text-decoration: none;
+    text-align: center;
+    width: 50px;
+    height: 52px;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 0px;
+}
+
+#searchButton:hover {
+    background: rgba(255, 255, 255, 0.651);
+}
+
+#sharePannel {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 10px;
+    font-size: 40px;
+    transition: 1s;
+    display: none;
+}
+
+i {
+    margin: 10px;
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.fa-brands.fa-x-twitter {
+    color: black;
+}
+
+.fa-brands.fa-facebook {
+    color: blue;
+}
+
+.fa-brands.fa-reddit {
+    color: orangered;
+}
+
+.fa-brands.fa-linkedin {
+    color: blue;
+}
+
+.fa-solid.fa-envelope {
+    color: brown;
+}
+
+.fa-brands.fa-whatsapp {
+    color: green;
+}
+
+.fa-solid.fa-circle-xmark {
+    color: rgba(255, 0, 0, 0.274);
+    background: none;
+    box-shadow: none;
+    margin: 50px -15px 0px 10px;
+    padding: 0;
+    border-radius: none;
+    float: right;
+    font-size: 29px;
+    top: 0;
+    background: rgba(255, 255, 255, 0.253);
+    text-align: center;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.fa-solid.fa-circle-xmark:hover {
+    transform: rotate(160deg);
+    transition: .5s;
+    background: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+}
+
+p {
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.fa-solid.fa-arrow-up-from-bracket {
+    background: none;
+    margin: 0;
+}
+
+i:hover {
+    position: relative;
+    top: -3px;
+    transition: .5s;
+    box-shadow: 4px 4px 0px black;
+    cursor: pointer;
+}
+
+#sharePannelsBoth {
+    color: rgb(0, 0, 0);
+    background: rgba(146, 145, 145, 0.308);
+    border-radius: 30px;
+    backdrop-filter: blur(3px);
+    padding: 10px;
+    margin: 20px;
+    transition: 1s;
+    text-align: center;
+}
+
+
+
+@keyframes colors{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+#app{
+    background: #01102b;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 35px;
+}
+
+#displayDiv{
+    width: 260px;
+    height: 90px;
+    background: #999999;;
+    margin: 7px 5px 15px 5px;  
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#display{
+    float: right;
+    margin: 10px;
+    font-size: 25px;
+    color: white;
+    border-radius: 20px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 200;
+}
+
+.calbuttons{
+    width: 60px;
+    height: 60px;
+    border: none;
+    margin: 0px 0px 5px 2px;
+    font-size: 20px;
+    background: #011538;
+    color: white;
+    box-shadow: 0 0 5px #010c20;
+    border-radius: 20px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 200;
+}
+
+.calbuttons:hover{
+    background: #03235a;
+}
+
+#nEq{
+    width: 125px;
+    height: 60px;
+    margin: 2px 0px 7px -0px;
+    background: rgb(128, 0, 0);
+    color: white;
+}
+
+.control{
+    background: #011c4d;
+    color: white;
+}
+.control:hover{
+    background: rgb(180, 48, 0);
+    color: white;
+}
+
+#eraser{
+    color: rgb(0, 0, 0) ;
+    box-shadow: none;
+    background: #011538;
+}
+#eraser:hover{
+    color: rgb(0, 0, 0) ;
+    background: #011538;
+}
+
+#nEq:hover{
+    background: rgb(3, 184, 3);
+}
+
+
+@media (max-width: 560px) {
+    #doNowList li {
+        width: 67%;
+        left: -45px;
+    }    
+}
